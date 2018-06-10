@@ -1,2 +1,2 @@
 language: kotlin
-fprocess: ./handler.kexe
+fprocess: ./handler

@@ -1,5 +1,1 @@
-fun main(args: Array<String>) {
-	val separator = " "
-
-	println("Hello from Kotlin! You said: ${args.joinToString(separator)}")
-}
+fun main(args: Array<String>) = println("Hello ${readLine()} :), have a good Kotlin!")

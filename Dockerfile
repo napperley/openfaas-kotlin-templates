@@ -1,15 +1,13 @@
 # Adapted from the unofficial OpenFaaS Swift template and the Saturnism Kotlin Native Docker.
 
-FROM saturnism/kotlin-native:0.7 AS build
-WORKDIR /kotlin/src/handler
+FROM debian:jessie
+ADD https://github.com/openfaas/faas/releases/download/0.8.2/fwatchdog /usr/bin
+RUN chmod +x /usr/bin/fwatchdog
 RUN mkdir -p /app
-
 WORKDIR /app
-COPY . .
-RUN konanc -opt -o handler .
-RUN curl -sSL https://github.com/openfaas/faas/releases/download/0.8.2/fwatchdog > ./fwatchdog
-RUN chmod +x ./fwatchdog
 
-ENV fprocess="./handler.kexe"
+COPY handler .
+RUN chmod +x handler
+ENV fprocess "./handler"
 HEALTHCHECK --interval=2s CMD [ -e /tmp/.lock ] || exit 1
-CMD ["./fwatchdog"]
+CMD ["fwatchdog"]
