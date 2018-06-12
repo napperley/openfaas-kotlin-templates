@@ -1,1 +1,9 @@
-fun main(args: Array<String>) = println("Hello ${readLine()} :), have a good Kotlin!")
+package function
+
+import function.handler.handle
+
+fun main(args: Array<String>) {
+	val resp = handle(readLine())
+
+	println(resp)
+}

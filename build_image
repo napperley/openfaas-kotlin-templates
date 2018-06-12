@@ -7,7 +7,7 @@ PROGRAM="handler"
 IMAGE="hello-kotlin"
 
 echo 'Compiling Kotlin Native program...'
-$KOTLIN_NATIVE_HOME/bin/konanc -opt -o $PROGRAM main.kt
+$KOTLIN_NATIVE_HOME/bin/konanc -opt -o $PROGRAM -e function.main main.kt function
 mv "$PROGRAM.kexe" $PROGRAM
 
 echo 'Building Docker image...'
