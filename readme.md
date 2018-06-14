@@ -9,10 +9,7 @@ In order to use this template go thorugh the following steps below.
 1. Clone this repository
 2. Run the following to build a new Kotlin Native Docker image:
 
-```
-chmod +x build_image
-./build_image
-```
+```docker build --tag hello-kotlin .```
 
 3. Start OpenFaaS
 4. Go to the following web address (in a Web Browser) to access the OpenFaaS Portal: `http://127.0.0.1:8080`
