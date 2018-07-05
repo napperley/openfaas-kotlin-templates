@@ -1,0 +1,7 @@
+# Additional files/dirs to unignore.
+
+# Additional files/dirs to ignore.
+build/
+.gradle/
+temp.txt
+.idea/
