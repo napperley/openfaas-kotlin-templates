@@ -1,3 +1,9 @@
 package org.example.function
 
-fun main(args: Array<String>) = println("Hello World! :)")
+import org.example.function.handler.handle
+
+fun main(args: Array<String>) {
+	print("What is your name: ")
+	val resp = handle(readLine())
+	println(resp)
+}
