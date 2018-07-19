@@ -1,2 +1,0 @@
-language: kotlin
-fprocess: ./java -jar /app/serverless-function-0.1-SNAPSHOT.jar

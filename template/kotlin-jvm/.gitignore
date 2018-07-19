@@ -5,3 +5,4 @@ build/
 .gradle/
 temp.txt
 .idea/
+template/
