@@ -30,6 +30,9 @@ val shadowJar by tasks.getting(ShadowJar::class) {
 
 dependencies {
 	val kotlinVer = "1.2.41"
+	val http4kVer = "3.33.2"
+
 	compile(project(":function"))
 	compile(kotlin(module = "stdlib-jdk8", version = kotlinVer))
+	compile("org.http4k:http4k-server-netty:$http4kVer")
 }
